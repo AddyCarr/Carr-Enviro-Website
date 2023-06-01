@@ -3111,6 +3111,21 @@ header h6 + p {
 
 /* Spotlights */
 
+.container {
+  display: flex;
+}
+
+.column {
+  flex: 1 1 50%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
 .spotlights > section {
   display: -moz-flex;
   display: -webkit-flex;
@@ -3120,7 +3135,7 @@ header h6 + p {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  min-height: 22.5em;
+  min-height: 16em;
 }
 
 body.is-ie .spotlights > section {
@@ -3171,7 +3186,7 @@ body.is-ie .spotlights > section {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  width: 50em;
+  /* width: 50em; */
   -ms-flex: 1;
 }
 
