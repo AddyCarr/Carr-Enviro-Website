@@ -1,6 +1,15 @@
 @import url(fontawesome-all.min.css);
+:root {
+  --dark-green: #343e36;
+  --dark-orange: #63321e;
+  --orange: #cc7c52;
+  --cream: #f4cdad;
+}
 
 /*
+#343e36
+
+
 	Carr Enviro by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
@@ -1958,7 +1967,7 @@ button,
   -webkit-transition: border-color 0.2s ease;
   -ms-transition: border-color 0.2s ease;
   transition: border-color 0.2s ease;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.192);
   border: solid 1px !important;
   border-color: rgba(255, 255, 255, 0.15) !important;
   border-radius: 3em;
@@ -2041,8 +2050,8 @@ input[type="reset"].primary,
 input[type="button"].primary,
 button.primary,
 .button.primary {
-  background-color: #ffffff;
-  color: #f8ece2 !important;
+  background-color: #dc8150;
+  color: #ffffff !important;
 }
 
 input[type="submit"].primary:after,
@@ -3315,7 +3324,7 @@ table.alt tfoot {
 }
 
 .wrapper > .inner {
-  padding: 5em 5em 3em 5em;
+  padding: 5em 5em 16em 5em;
   max-width: 100%;
   width: 75em;
 }
@@ -3361,11 +3370,11 @@ table.alt tfoot {
 }
 
 .wrapper.style2-alt {
-  background-color: #606c38;
+  background-color: var(--dark-green);
 }
 
 .wrapper.style3 {
-  background-color: #dda15e;
+  background-color: var(--orange);
 }
 
 .wrapper.style3-alt {
@@ -3566,7 +3575,7 @@ body.is-preload .wrapper.fade > .inner {
 /* Wrapper (main) */
 
 #sidebar + #wrapper {
-  margin-left: 18em;
+  margin-left: 24em;
 }
 
 @media screen and (max-width: 1280px) {
@@ -3589,7 +3598,7 @@ body.is-preload .wrapper.fade > .inner {
 /* Footer */
 
 #sidebar + #wrapper + #footer {
-  margin-left: 18em;
+  margin-left: 24em;
 }
 
 @media screen and (max-width: 1280px) {
@@ -3618,17 +3627,17 @@ body.is-preload .wrapper.fade > .inner {
 /* Sidebar */
 
 #sidebar {
-  padding: 2.5em 2.5em 0.5em 2.5em;
+  padding: 13em 2.5em 13em 2.5em;
   background: #f8ece2;
   cursor: default;
   height: 100vh;
   left: 0;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   position: fixed;
   text-align: right;
   top: 0;
-  width: 18em;
+  width: 24em;
   z-index: 10000;
 }
 
@@ -3656,6 +3665,10 @@ body.is-preload .wrapper.fade > .inner {
   min-height: 100%;
   opacity: 1;
   width: 100%;
+}
+
+#sidebar > .inner > .sidefooter p {
+  color: #402f1e;
 }
 
 body.is-ie #sidebar > .inner {
@@ -3832,14 +3845,14 @@ body.is-ie #sidebar > .inner {
   -ms-transition: color 0.2s ease;
   transition: color 0.2s ease;
   border: 0;
-  color: rgba(255, 255, 255, 0.35);
+  color: rgba(16, 11, 9, 0.5);
   display: block;
-  font-size: 0.6em;
-  font-weight: bold;
+  font-size: 0.75em;
+  font-weight: 100;
   letter-spacing: 0.25em;
   line-height: 1.75;
   outline: 0;
-  padding: 1.35em 0;
+  padding: 1.75em 0;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
@@ -3861,10 +3874,10 @@ body.is-ie #sidebar > .inner {
 }
 
 #sidebar nav a:after {
-  background-image: -moz-linear-gradient(to right, #fefae0, #dda15e);
-  background-image: -webkit-linear-gradient(to right, #fefae0, #dda15e);
-  background-image: -ms-linear-gradient(to right, #fefae0, #dda15e);
-  background-image: linear-gradient(to right, #fefae0, #dda15e);
+  background-image: -moz-linear-gradient(to right, #b28867, #dda15e);
+  background-image: -webkit-linear-gradient(to right, #b28867, #dda15e);
+  background-image: -ms-linear-gradient(to right, #b28867, #dda15e);
+  background-image: linear-gradient(to right, #b28867, #dda15e);
   -moz-transition: max-width 0.2s ease;
   -webkit-transition: max-width 0.2s ease;
   -ms-transition: max-width 0.2s ease;
@@ -3873,11 +3886,12 @@ body.is-ie #sidebar > .inner {
 }
 
 #sidebar nav a:hover {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(235, 160, 86, 0.801);
 }
 
 #sidebar nav a.active {
-  color: #ffffff;
+  color: #886c57;
+  font-weight: 600;
 }
 
 #sidebar nav a.active:after {
@@ -3965,17 +3979,28 @@ body.is-preload #sidebar nav ul li {
 /* Intro */
 
 #intro {
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-image: url("images/intro.svg");
   background-repeat: no-repeat;
-  right: 0;
+  background-size: cover;
+  background-position: center;
   /* margin-left: 18em; */
-  background-size: 100% 100%;
   z-index: 999;
+}
+#intro h1 {
+  color: #402f1f;
+}
+
+.introtext {
+  display: inline;
+}
+.intrologo {
+  display: inline-block;
 }
 
 #intro p {
   font-size: 1.25em;
+  color: rgba(42, 31, 20, 0.77);
 }
 
 @media screen and (max-width: 980px) {
