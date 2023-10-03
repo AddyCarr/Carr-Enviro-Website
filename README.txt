@@ -1,33 +1,25 @@
-Carr Enviro by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# Carr Enviro Website
 
+Carr Enviro is a consultancy focused on environmental awareness and policy. It provides valuable information about environmental issues, conservation efforts, and sustainable practices to help users make informed decisions for a greener planet.
+The website features original graphics and a modern responsive design.
 
-So I've had the wireframe for this particular design kicking around for some time, but with all
-the other interesting (and in some cases, semi-secret) projects I've been working on it took me
-a little while to get to actually designing and coding it. Fortunately, things have eased up
-enough for me to finaly get around to it, so I'm happy to introduce Carr Enviro: a fun, blocky,
-one-page design with a lot of color, a bit of animation, and an additional "generic" page template
-(because hey, even one-page sites usually need an interior page or two). Hope you dig it :)
+## Installation
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+There are no specific packages to install for this project. Simply clone the repository and open the index.html file in your preferred web browser to access the Carr Enviro Website.
 
-(* = not included)
+```bash
+git clone https://github.com/username/carr-enviro-website.git
+cd carr-enviro-website
+```
 
-AJ
-aj@lkn.io | @ajlkn
+## Usage
 
+Once you have cloned the repository, open the index.html file in your web browser. Navigate through the website to explore various environmental topics, read articles, and engage with multimedia content to enhance your knowledge about environmental conservation.
 
-Credits:
+## Contributing
 
-	Demo Images:
-		Unsplash (unsplash.com)
+Contributions to this project are not permitted at the moment.
 
-	Icons:
-		Font Awesome (fontawesome.io)
+## License
 
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).
