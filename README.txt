@@ -8,7 +8,7 @@ The website features original graphics and a modern responsive design.
 There are no specific packages to install for this project. Simply clone the repository and open the index.html file in your preferred web browser to access the Carr Enviro Website.
 
 ```bash
-git clone https://github.com/username/carr-enviro-website.git
+git clone https://github.com/addycarr/carrenviro.git
 cd carr-enviro-website
 ```
 
