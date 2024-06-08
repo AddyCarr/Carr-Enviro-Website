@@ -220,6 +220,7 @@ body {
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -317,6 +318,7 @@ a {
   border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
   color: inherit;
   text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a:hover {
@@ -363,6 +365,7 @@ h6 a {
 
 h1 {
   font-size: 2.75em;
+  font-family: "Louize";
 }
 
 h1.major {
@@ -2025,6 +2028,7 @@ button,
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 input[type="submit"]:after,
@@ -2090,6 +2094,10 @@ input[type="button"].primary,
 button.primary,
 .button.primary {
   background-color: #dc8150;
+  background-image:
+  radial-gradient(at 50% 48%, hsla(25,100%,1%,1) 0px, transparent 10%),
+  radial-gradient(at 50% 50%, hsla(40,100%,2%,0.52) 0px, transparent 10%);
+  background-blend-mode:screen;
   color: #ffffff !important;
 }
 
@@ -3998,6 +4006,9 @@ body.is-preload .wrapper.fade > .inner {
 
 /* Sidebar */
 
+.sidecontent
+{max-height: 95vh;}
+
 .sideinner p {
   color: var(--light-brown);
   padding-top: 6em;
@@ -4007,7 +4018,7 @@ body.is-preload .wrapper.fade > .inner {
 } 
 
 #sidebar {
-  padding: 6em 2.5em 13em 2.5em;
+  padding: 2em 2.5em 13em 2.5em;
   background: #f8ece2;
   cursor: default;
   height: 100vh;
@@ -4229,7 +4240,7 @@ body.is-ie #sidebar > .inner {
   color: rgba(16, 11, 9, 0.5);
   display: block;
   font-size: 0.6em;
-  font-weight: 100;
+  font-weight: medium;
   letter-spacing: 0.25em;
   line-height: 1.75;
   outline: 0;
@@ -4264,15 +4275,17 @@ body.is-ie #sidebar > .inner {
   -ms-transition: max-width 0.2s ease;
   transition: max-width 0.2s ease;
   max-width: 0;
+  
 }
 
 #sidebar nav a:hover {
   color: rgba(235, 160, 86, 0.801);
+  font-weight: bolder;
 }
 
 #sidebar nav a.active {
   color: #886c57;
-  font-weight: 600;
+  font-weight: bolder;
 }
 
 #sidebar nav a.active:after {
@@ -4358,23 +4371,54 @@ body.is-preload #sidebar nav ul li {
 }
 
 /* Intro */
-
 #intro {
+  position: relative; /* Ensure the parent can position children absolutely */
   background-attachment: scroll;
   background-image: url("images/intro.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* margin-left: 18em; */
+  z-index: 998;
+}
+
+#introbirds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-attachment: scroll;
+  background-image: url("images/introbirds.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: scaleUp 10s forwards;
   z-index: 999;
 }
+
 #intro h1 {
   color: #402f1f;
   font-size: 50px;
+  font-weight: 600;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
 }
 
 .introtext {
   display: inline;
+}
+
+@media screen and (max-width: 980px) {
+  .introtext {
+    padding-right: 6em;
+  }
 }
 .intrologo {
   display: inline-block;
@@ -4402,8 +4446,8 @@ body.is-preload #sidebar nav ul li {
     background-attachment: scroll;
   }
 }
-/* About (zero) */
 
+/* About (zero) */
 #zero > .inner {
   text-align: center;
 }
@@ -4422,6 +4466,7 @@ body.is-preload #sidebar nav ul li {
     align-items: start;
   }
 }
+
 
 .aboutgraphics {
   display: flex;
